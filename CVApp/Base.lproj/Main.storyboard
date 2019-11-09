@@ -119,7 +119,7 @@ axeldalbard@hotmail.com
         <!--Experience-->
         <scene sceneID="A4F-Pd-wlo">
             <objects>
-                <tableViewController id="jgz-uF-usW" sceneMemberID="viewController">
+                <tableViewController id="jgz-uF-usW" customClass="ExperienceTableViewController" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="PhD-NR-q5f">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -166,6 +166,9 @@ axeldalbard@hotmail.com
                         </connections>
                     </tableView>
                     <navigationItem key="navigationItem" title="Experience" id="Tes-na-5WL"/>
+                    <connections>
+                        <outlet property="tableView" destination="PhD-NR-q5f" id="L2n-Sk-Wmt"/>
+                    </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="PPZ-eq-PTk" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>

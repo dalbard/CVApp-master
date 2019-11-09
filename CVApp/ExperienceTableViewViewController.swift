@@ -8,23 +8,31 @@
 
 import UIKit
 
-class ExperienceTableViewViewController: UIViewController {
+class ExperienceTableViewViewController: UITableViewController {
 
+    @IBOutlet var experienceTableView: UITableView!
+    
+    var jobs: [Work] = []
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
         // Do any additional setup after loading the view.
+        experienceTableView.delegate = self
+        experienceTableView.dataSource = self
+        
+        for i in 0..<10 {
+            let work = Work(imageName: "\(Int.random(in: 1...10))", title:"Work \(i)", date: "2014 - 2015")
+            jobs.append(work)
+        }
+        experienceTableView.reloadData()
     }
-    
 
-    /*
-    // MARK: - Navigation
+}
 
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
+// MARK: - Table View
+extension ExperienceTableViewViewController {
+    override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        return jobs.count
     }
-    */
-
 }

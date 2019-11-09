@@ -15,6 +15,7 @@
 		5009D9E7236C34BA00AA0EC5 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5009D9E5236C34BA00AA0EC5 /* LaunchScreen.storyboard */; };
 		50A3E8122375A6F20025FED9 /* ExperienceTableViewViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 50A3E8112375A6F20025FED9 /* ExperienceTableViewViewController.swift */; };
 		50A3E8142375BFDA0025FED9 /* ExperienceTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 50A3E8132375BFDA0025FED9 /* ExperienceTableViewCell.swift */; };
+		50E8BC5A237709B10045261D /* Work.swift in Sources */ = {isa = PBXBuildFile; fileRef = 50E8BC59237709B10045261D /* Work.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -28,6 +29,7 @@
 		5009D9E8236C34BA00AA0EC5 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		50A3E8112375A6F20025FED9 /* ExperienceTableViewViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExperienceTableViewViewController.swift; sourceTree = "<group>"; };
 		50A3E8132375BFDA0025FED9 /* ExperienceTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExperienceTableViewCell.swift; sourceTree = "<group>"; };
+		50E8BC59237709B10045261D /* Work.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Work.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -66,6 +68,7 @@
 				5009D9E0236C34B800AA0EC5 /* Main.storyboard */,
 				50A3E8132375BFDA0025FED9 /* ExperienceTableViewCell.swift */,
 				50A3E8112375A6F20025FED9 /* ExperienceTableViewViewController.swift */,
+				50E8BC59237709B10045261D /* Work.swift */,
 				5009D9E3236C34BA00AA0EC5 /* Assets.xcassets */,
 				5009D9E5236C34BA00AA0EC5 /* LaunchScreen.storyboard */,
 				5009D9E8236C34BA00AA0EC5 /* Info.plist */,
@@ -146,6 +149,7 @@
 			files = (
 				50A3E8122375A6F20025FED9 /* ExperienceTableViewViewController.swift in Sources */,
 				5009D9DF236C34B800AA0EC5 /* ViewController.swift in Sources */,
+				50E8BC5A237709B10045261D /* Work.swift in Sources */,
 				50A3E8142375BFDA0025FED9 /* ExperienceTableViewCell.swift in Sources */,
 				5009D9DB236C34B800AA0EC5 /* AppDelegate.swift in Sources */,
 				5009D9DD236C34B800AA0EC5 /* SceneDelegate.swift in Sources */,
