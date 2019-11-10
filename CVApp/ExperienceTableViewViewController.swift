@@ -35,4 +35,18 @@ extension ExperienceTableViewViewController {
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return jobs.count
     }
+    
+    override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        if let cell = tableView.dequeueReusableCell(withIdentifier: "WorkCell", for:
+            indexPath) as? ExperienceTableViewCell {
+            let work = jobs[indexPath.row]
+            cell.workImage.image = UIImage(named: work.imageName)
+            cell.workTitleLabel.text = work.title
+            cell.workDurationLabel.text = work.date
+            
+            return cell
+        }
+        
+        return UITableViewCell()
+    }
 }
