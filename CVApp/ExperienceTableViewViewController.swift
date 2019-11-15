@@ -21,8 +21,8 @@ class ExperienceTableViewViewController: UITableViewController {
         experienceTableView.delegate = self
         experienceTableView.dataSource = self
         
-        for i in 0..<10 {
-            let work = Work(imageName: "\(Int.random(in: 1...10))", title:"Work \(i)", date: "2014 - 2015")
+        for i in 1..<4 {
+            let work = Work(imageName: "trash", title:"Work \(i)", date: "2014 - 2015")
             jobs.append(work)
         }
         experienceTableView.reloadData()
@@ -36,11 +36,16 @@ extension ExperienceTableViewViewController {
         return jobs.count
     }
     
+    override func tableView(_ tableView: UITableView, titleForHeaderInSection section: Int) -> String? {
+        let nameOfSection = ["Work", "Educaton"]
+        return nameOfSection[section]
+    }
+    
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         if let cell = tableView.dequeueReusableCell(withIdentifier: "WorkCell", for:
             indexPath) as? ExperienceTableViewCell {
             let work = jobs[indexPath.row]
-            cell.workImage.image = UIImage(named: work.imageName)
+            cell.workImage.image = UIImage(systemName: work.imageName)
             cell.workTitleLabel.text = work.title
             cell.workDurationLabel.text = work.date
             
