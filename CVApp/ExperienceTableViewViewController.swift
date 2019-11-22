@@ -14,6 +14,8 @@ class ExperienceTableViewViewController: UITableViewController {
     
     var jobs: [Work] = []
     
+    var educations: [Education] = []
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
@@ -25,6 +27,12 @@ class ExperienceTableViewViewController: UITableViewController {
             let work = Work(imageName: "trash", title:"Work \(i)", date: "2014 - 2015")
             jobs.append(work)
         }
+        
+        for i in 1..<3 {
+            let education = Education(imageName: "trash", title:"Education \(i)", date: "2018 - Current")
+            educations.append(education)
+        }
+        
         experienceTableView.reloadData()
     }
 
@@ -32,26 +40,64 @@ class ExperienceTableViewViewController: UITableViewController {
 
 // MARK: - Table View
 extension ExperienceTableViewViewController {
+    
+    override func numberOfSections(in tableView: UITableView) -> Int {
+           return 2
+       }
+    
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return jobs.count
+            
+        if section == 0{
+            return jobs.count
+        }else {
+            return educations.count
+        }
+            
     }
     
     override func tableView(_ tableView: UITableView, titleForHeaderInSection section: Int) -> String? {
-        let nameOfSection = ["Work", "Educaton"]
-        return nameOfSection[section]
+        if section == 0 {
+            return "Work"
+        }else{
+            return "Education"
+        }
     }
     
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        if let cell = tableView.dequeueReusableCell(withIdentifier: "WorkCell", for:
-            indexPath) as? ExperienceTableViewCell {
-            let work = jobs[indexPath.row]
-            cell.workImage.image = UIImage(systemName: work.imageName)
-            cell.workTitleLabel.text = work.title
-            cell.workDurationLabel.text = work.date
-            
+        if let cell = tableView.dequeueReusableCell(withIdentifier: "WorkCell") as? ExperienceTableViewCell {
+            if(indexPath.section == 0){
+                let work = jobs[indexPath.row]
+                cell.workImage.image = UIImage(systemName: work.imageName)
+                cell.workTitleLabel.text = work.title
+                cell.workDurationLabel.text = work.date
+            }else{
+                let education = educations[indexPath.row]
+                cell.workImage.image = UIImage(systemName: education.imageName)
+                cell.workTitleLabel.text = education.title
+                cell.workDurationLabel.text = education.date
+            }
             return cell
         }
-        
-        return UITableViewCell()
+        else {
+            return UITableViewCell()
+        }
+    }
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if let destination = segue.destination as? ExperienceDetailViewController {
+            if let indexPath = sender as? IndexPath {
+                if(indexPath.section == 0){
+                    let exp = jobs[indexPath.row]
+                    destination.work = exp
+                }else {
+                    let exp = educations[indexPath.row]
+                    destination.education = exp
+                }
+            }
+        }
+    }
+    
+    override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        performSegue(withIdentifier: "segue", sender: indexPath)
     }
 }

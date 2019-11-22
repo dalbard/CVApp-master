@@ -13,8 +13,11 @@
 		5009D9E2236C34B800AA0EC5 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5009D9E0236C34B800AA0EC5 /* Main.storyboard */; };
 		5009D9E4236C34BA00AA0EC5 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 5009D9E3236C34BA00AA0EC5 /* Assets.xcassets */; };
 		5009D9E7236C34BA00AA0EC5 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5009D9E5236C34BA00AA0EC5 /* LaunchScreen.storyboard */; };
+		501CDD82238059CB004BE50D /* ExperienceDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 501CDD81238059CB004BE50D /* ExperienceDetailViewController.swift */; };
+		508B2BDC2381948A00E48751 /* SkillsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 508B2BDB2381948A00E48751 /* SkillsViewController.swift */; };
 		50A3E8122375A6F20025FED9 /* ExperienceTableViewViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 50A3E8112375A6F20025FED9 /* ExperienceTableViewViewController.swift */; };
 		50A3E8142375BFDA0025FED9 /* ExperienceTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 50A3E8132375BFDA0025FED9 /* ExperienceTableViewCell.swift */; };
+		50C7FD04237F13FE0082DA69 /* Education.swift in Sources */ = {isa = PBXBuildFile; fileRef = 50C7FD03237F13FE0082DA69 /* Education.swift */; };
 		50E8BC5A237709B10045261D /* Work.swift in Sources */ = {isa = PBXBuildFile; fileRef = 50E8BC59237709B10045261D /* Work.swift */; };
 /* End PBXBuildFile section */
 
@@ -27,8 +30,11 @@
 		5009D9E3236C34BA00AA0EC5 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		5009D9E6236C34BA00AA0EC5 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		5009D9E8236C34BA00AA0EC5 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		501CDD81238059CB004BE50D /* ExperienceDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExperienceDetailViewController.swift; sourceTree = "<group>"; };
+		508B2BDB2381948A00E48751 /* SkillsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SkillsViewController.swift; sourceTree = "<group>"; };
 		50A3E8112375A6F20025FED9 /* ExperienceTableViewViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExperienceTableViewViewController.swift; sourceTree = "<group>"; };
 		50A3E8132375BFDA0025FED9 /* ExperienceTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExperienceTableViewCell.swift; sourceTree = "<group>"; };
+		50C7FD03237F13FE0082DA69 /* Education.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Education.swift; sourceTree = "<group>"; };
 		50E8BC59237709B10045261D /* Work.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Work.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -66,8 +72,11 @@
 				5009D9DC236C34B800AA0EC5 /* SceneDelegate.swift */,
 				5009D9DE236C34B800AA0EC5 /* ViewController.swift */,
 				5009D9E0236C34B800AA0EC5 /* Main.storyboard */,
+				508B2BDB2381948A00E48751 /* SkillsViewController.swift */,
 				50A3E8132375BFDA0025FED9 /* ExperienceTableViewCell.swift */,
 				50A3E8112375A6F20025FED9 /* ExperienceTableViewViewController.swift */,
+				501CDD81238059CB004BE50D /* ExperienceDetailViewController.swift */,
+				50C7FD03237F13FE0082DA69 /* Education.swift */,
 				50E8BC59237709B10045261D /* Work.swift */,
 				5009D9E3236C34BA00AA0EC5 /* Assets.xcassets */,
 				5009D9E5236C34BA00AA0EC5 /* LaunchScreen.storyboard */,
@@ -147,8 +156,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				50C7FD04237F13FE0082DA69 /* Education.swift in Sources */,
+				501CDD82238059CB004BE50D /* ExperienceDetailViewController.swift in Sources */,
 				50A3E8122375A6F20025FED9 /* ExperienceTableViewViewController.swift in Sources */,
 				5009D9DF236C34B800AA0EC5 /* ViewController.swift in Sources */,
+				508B2BDC2381948A00E48751 /* SkillsViewController.swift in Sources */,
 				50E8BC5A237709B10045261D /* Work.swift in Sources */,
 				50A3E8142375BFDA0025FED9 /* ExperienceTableViewCell.swift in Sources */,
 				5009D9DB236C34B800AA0EC5 /* AppDelegate.swift in Sources */,
